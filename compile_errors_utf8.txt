@@ -1,0 +1,1084 @@
+﻿g++ : 2.cpp:158:20: error: field 'lg' has incomplete type 'Levelgenerator'
+At line:1 char:1
++ g++ 2.cpp -o 2.exe 2> compile_errors.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2.cpp:158:20: e...Levelgenerator':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+     Levelgenerator lg;
+                    ^~
+2.cpp:10:7: note: forward declaration of 'class Levelgenerator'
+ class Levelgenerator;
+       ^~~~~~~~~~~~~~
+2.cpp:159:9: error: field 'm' has incomplete type 'Map'
+     Map m;
+         ^
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:160:12: error: field 'p' has incomplete type 'Player'
+     Player p;
+            ^
+2.cpp:12:7: note: forward declaration of 'class Player'
+ class Player;
+       ^~~~~~
+2.cpp: In member function 'void Game::playGame()':
+2.cpp:34:15: error: aggregate 'Level a' has incomplete type and cannot be defined
+         Level a;
+               ^
+2.cpp:66:28: error: aggregate 'Levelgenerator l' has incomplete type and cannot be defined
+             Levelgenerator l;
+                            ^
+2.cpp: In member function 'void Game::chooseLevels()':
+2.cpp:120:28: error: aggregate 'Levelgenerator lg' has incomplete type and cannot be defined
+             Levelgenerator lg;
+                            ^~
+2.cpp:121:29: error: 'a' was not declared in this scope
+             lg.generatelvl1(a);
+                             ^
+2.cpp: In member function 'void Game::moveEnemies(Level&)':
+2.cpp:139:30: error: invalid use of incomplete type 'class Level'
+         for (int i = 0; i < a.getTerrainMap().size(); ++i) {
+                              ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:140:34: error: invalid use of incomplete type 'class Level'
+             for (int j = 0; j < a.getTerrainMap()[i].size(); ++j) {
+                                  ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:141:22: error: invalid use of incomplete type 'class Level'
+                 if (a.getTerrainMap()[i][j]->t != nullptr && a.getTerrainMap()[i][j]->t->getIsVisible()) {
+                      ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:141:63: error: invalid use of incomplete type 'class Level'
+                 if (a.getTerrainMap()[i][j]->t != nullptr && a.getTerrainMap()[i][j]->t->getIsVisible()) {
+                                                               ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:142:22: error: invalid use of incomplete type 'class Level'
+                     a.getTerrainMap()[i][j]->t->moveEnemy(a);
+                      ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp: In member function 'void Game::attack(Level&, int)':
+2.cpp:149:30: error: invalid use of incomplete type 'class Level'
+         for (int i = 0; i < a.getTerrainMap().size(); ++i) {
+                              ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:150:34: error: invalid use of incomplete type 'class Level'
+             for (int j = 0; j < a.getTerrainMap()[i].size(); ++j) {
+                                  ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:151:22: error: invalid use of incomplete type 'class Level'
+                 if (a.getTerrainMap()[i][j]->t != nullptr && a.getTerrainMap()[i][j]->t->getIsVisible()) {
+                      ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:151:63: error: invalid use of incomplete type 'class Level'
+                 if (a.getTerrainMap()[i][j]->t != nullptr && a.getTerrainMap()[i][j]->t->getIsVisible()) {
+                                                               ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:152:22: error: invalid use of incomplete type 'class Level'
+                     a.getTerrainMap()[i][j]->t->attack(a, currentLoop);
+                      ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp: In member function 'void Levelgenerator::generatelvl1(Level&)':
+2.cpp:166:26: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+         char* wavedata = "llll";
+                          ^~~~~~
+2.cpp:167:10: error: invalid use of incomplete type 'class Level'
+         i.translatewave(wavedata);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp: In member function 'void Levelgenerator::generatelvl2(Level&)':
+2.cpp:170:24: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+         char* wavedata="wlwlwlwlw";
+                        ^~~~~~~~~~~
+2.cpp:171:10: error: invalid use of incomplete type 'class Level'
+         i.setwave(wavedata);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:172:10: error: invalid use of incomplete type 'class Level'
+         i.setenemynum(5);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:173:10: error: invalid use of incomplete type 'class Level'
+         i.setenemyhealth(5);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:174:10: error: invalid use of incomplete type 'class Level'
+         i.setenemyattack(1);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:175:10: error: invalid use of incomplete type 'class Level'
+         i.setenemyrange(2);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:176:10: error: invalid use of incomplete type 'class Level'
+         i.setstartcash(50);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:177:10: error: invalid use of incomplete type 'class Level'
+         i.setstartscore(0);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:178:10: error: invalid use of incomplete type 'class Level'
+         i.setstartkills(0);
+          ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp: In member function 'void Levelgenerator::generatelvl3(Level&)':
+2.cpp:182:24: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+         char* wavedata="wllllw";
+                        ^~~~~~~~
+2.cpp:183:6: error: invalid use of incomplete type 'class Level'
+     i.setstartcash(100);
+      ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:184:6: error: invalid use of incomplete type 'class Level'
+     i.setstartscore(0);
+      ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp:185:6: error: invalid use of incomplete type 'class Level'
+     i.setstartkills(0);
+      ^
+2.cpp:8:7: note: forward declaration of 'class Level'
+ class Level;
+       ^~~~~
+2.cpp: In member function 'void Level::translatemap(int)':
+2.cpp:213:18: error: invalid use of incomplete type 'class Map'
+                 m->r[0][0]->e = new Grass();
+                  ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:213:43: error: invalid use of incomplete type 'class Grass'
+                 m->r[0][0]->e = new Grass();
+                                           ^
+2.cpp:19:7: note: forward declaration of 'class Grass'
+ class Grass;
+       ^~~~~
+2.cpp:216:18: error: invalid use of incomplete type 'class Map'
+                 m->r[0][0]->e = new Hill();
+                  ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:216:42: error: invalid use of incomplete type 'class Hill'
+                 m->r[0][0]->e = new Hill();
+                                          ^
+2.cpp:20:7: note: forward declaration of 'class Hill'
+ class Hill;
+       ^~~~
+2.cpp:219:18: error: invalid use of incomplete type 'class Map'
+                 m->r[0][0]->e = new Road();
+                  ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:219:42: error: invalid use of incomplete type 'class Road'
+                 m->r[0][0]->e = new Road();
+                                          ^
+2.cpp:18:7: note: forward declaration of 'class Road'
+ class Road;
+       ^~~~
+2.cpp: In member function 'void Level::getTerrainMap()':
+2.cpp:249:29: error: invalid use of incomplete type 'class Map'
+        for (int i = 0; i < m->rows; i++) {
+                             ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:250:33: error: invalid use of incomplete type 'class Map'
+            for (int j = 0; j < m->columns; j++) {
+                                 ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:251:25: error: invalid use of incomplete type 'class Map'
+                switch (m->r[i][j]->e->type) {
+                         ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp: In member function 'void Level::translatewave(const char*)':
+2.cpp:291:139: error: invalid use of incomplete type 'class Enemy'
+                     enemies[waveIndex].push_back(new Enemy(enemyHealth, enemyMoney, -enemyIndex, findstartpoint(), 
+enemyRange, enemyAttack));
+                                                                                                                       
+                    ^
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:298:138: error: invalid use of incomplete type 'class Boss'
+                     enemies[waveIndex].push_back(new Boss(enemyHealth, enemyMoney, -enemyIndex, findstartpoint(), 
+enemyRange, enemyAttack));
+                                                                                                                       
+                   ^
+2.cpp:16:7: note: forward declaration of 'class Boss'
+ class Boss;
+       ^~~~
+2.cpp: In member function 'void Level::printEnemies()':
+2.cpp:311:62: error: cannot dynamic_cast '(&((Level*)this)->Level::enemies.std::vector<_Tp, 
+_Alloc>::operator[]<std::vector<Enemy*>, std::allocator<std::vector<Enemy*> > >(((std::vector<std::vector<Enemy*> 
+>::size_type)i)))->std::vector<_Tp, _Alloc>::operator[]<Enemy*, std::allocator<Enemy*> 
+>(((std::vector<Enemy*>::size_type)j))' (of type '__gnu_cxx::__alloc_traits<std::allocator<Enemy*> >::value_type {aka 
+class Enemy*}') to type 'class Enemy*' (target is not pointer or reference to complete type)
+                 Enemy *e = dynamic_cast<Enemy*>(enemies[i][j]);
+                                                              ^
+2.cpp:312:60: error: cannot dynamic_cast '(&((Level*)this)->Level::enemies.std::vector<_Tp, 
+_Alloc>::operator[]<std::vector<Enemy*>, std::allocator<std::vector<Enemy*> > >(((std::vector<std::vector<Enemy*> 
+>::size_type)i)))->std::vector<_Tp, _Alloc>::operator[]<Enemy*, std::allocator<Enemy*> 
+>(((std::vector<Enemy*>::size_type)j))' (of type '__gnu_cxx::__alloc_traits<std::allocator<Enemy*> >::value_type {aka 
+class Enemy*}') to type 'class Boss*' (target is not pointer or reference to complete type)
+                 Boss *b = dynamic_cast<Boss*>(enemies[i][j]);
+                                                            ^
+2.cpp:314:68: error: invalid use of incomplete type 'class Enemy'
+                     cout << "Enemy " << j + 1 << ": Health = " << e->health << ", Money = " << e->money << ", 
+Position = (" << e->x << ", " << e->y << ")\n";
+                                                                    ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:314:97: error: invalid use of incomplete type 'class Enemy'
+                     cout << "Enemy " << j + 1 << ": Health = " << e->health << ", Money = " << e->money << ", 
+Position = (" << e->x << ", " << e->y << ")\n";
+                                                                                                 ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:314:129: error: invalid use of incomplete type 'class Enemy'
+                     cout << "Enemy " << j + 1 << ": Health = " << e->health << ", Money = " << e->money << ", 
+Position = (" << e->x << ", " << e->y << ")\n";
+                                                                                                                       
+          ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:314:145: error: invalid use of incomplete type 'class Enemy'
+                     cout << "Enemy " << j + 1 << ": Health = " << e->health << ", Money = " << e->money << ", 
+Position = (" << e->x << ", " << e->y << ")\n";
+                                                                                                                       
+                          ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:317:68: error: invalid use of incomplete type 'class Boss'
+                     cout << "Enemy " << j + 1 << ": Health = " << b->health << ", Money = " << b->money << ", 
+Position = (" << b->x << ", " << b->y << ")\n";
+                                                                    ^~
+2.cpp:16:7: note: forward declaration of 'class Boss'
+ class Boss;
+       ^~~~
+2.cpp:317:97: error: invalid use of incomplete type 'class Boss'
+                     cout << "Enemy " << j + 1 << ": Health = " << b->health << ", Money = " << b->money << ", 
+Position = (" << b->x << ", " << b->y << ")\n";
+                                                                                                 ^~
+2.cpp:16:7: note: forward declaration of 'class Boss'
+ class Boss;
+       ^~~~
+2.cpp:317:129: error: invalid use of incomplete type 'class Boss'
+                     cout << "Enemy " << j + 1 << ": Health = " << b->health << ", Money = " << b->money << ", 
+Position = (" << b->x << ", " << b->y << ")\n";
+                                                                                                                       
+          ^~
+2.cpp:16:7: note: forward declaration of 'class Boss'
+ class Boss;
+       ^~~~
+2.cpp:317:145: error: invalid use of incomplete type 'class Boss'
+                     cout << "Enemy " << j + 1 << ": Health = " << b->health << ", Money = " << b->money << ", 
+Position = (" << b->x << ", " << b->y << ")\n";
+                                                                                                                       
+                          ^~
+2.cpp:16:7: note: forward declaration of 'class Boss'
+ class Boss;
+       ^~~~
+2.cpp: In member function 'void Wave::translate(const char*)':
+2.cpp:358:102: error: 'findstartpoint' was not declared in this scope
+                     enemies.push_back(new Enemy(enemyHealth, enemyMoney, -enemyIndex, findstartpoint(), enemyRange, 
+enemyAttack));
+                                                                                                      ^
+2.cpp:358:128: error: invalid use of incomplete type 'class Enemy'
+                     enemies.push_back(new Enemy(enemyHealth, enemyMoney, -enemyIndex, findstartpoint(), enemyRange, 
+enemyAttack));
+                                                                                                                       
+         ^
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:365:127: error: invalid use of incomplete type 'class Boss'
+                     enemies.push_back(new Boss(enemyHealth, enemyMoney, -enemyIndex, findstartpoint(), enemyRange, 
+enemyAttack));
+                                                                                                                       
+        ^
+2.cpp:16:7: note: forward declaration of 'class Boss'
+ class Boss;
+       ^~~~
+2.cpp: At global scope:
+2.cpp:376:17: error: 'TerrainObject' was not declared in this scope
+     std::vector<TerrainObject*> terrainObjects;
+                 ^~~~~~~~~~~~~
+2.cpp:376:31: error: template argument 1 is invalid
+     std::vector<TerrainObject*> terrainObjects;
+                               ^
+2.cpp:376:31: error: template argument 2 is invalid
+2.cpp:388:9: error: 'Point' does not name a type
+         Point position;
+         ^~~~~
+2.cpp:391:41: error: 'Point' has not been declared
+         TerrainObject(TerrainType type, Point position) : type(type), position(position) {}
+                                         ^~~~~
+2.cpp:403:22: error: 'Point' has not been declared
+     bool isOnTerrain(Point point) {
+                      ^~~~~
+2.cpp: In constructor 'Terrain::TerrainObject::TerrainObject(Terrain::TerrainType, int)':
+2.cpp:391:71: error: class 'Terrain::TerrainObject' does not have any field named 'position'
+         TerrainObject(TerrainType type, Point position) : type(type), position(position) {}
+                                                                       ^~~~~~~~
+2.cpp: In member function 'void Terrain::addTerrainObject(Terrain::TerrainObject*)':
+2.cpp:399:24: error: request for member 'push_back' in '((Terrain*)this)->Terrain::terrainObjects', which is of 
+non-class type 'int'
+         terrainObjects.push_back(terrainObject);
+                        ^~~~~~~~~
+2.cpp: In member function 'bool Terrain::isOnTerrain(int)':
+2.cpp:404:36: error: 'begin' was not declared in this scope
+         for (auto& terrainObject : terrainObjects) {
+                                    ^~~~~~~~~~~~~~
+2.cpp:404:36: note: suggested alternatives:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\functional:55,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\thread:39,
+                 from 2.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:105:37: note:   'std::begin'
+   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
+                                     ^~~~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:105:37: note:   'std::begin'
+2.cpp:404:36: error: 'end' was not declared in this scope
+         for (auto& terrainObject : terrainObjects) {
+                                    ^~~~~~~~~~~~~~
+2.cpp:404:36: note: suggested alternatives:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\functional:55,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\thread:39,
+                 from 2.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:107:37: note:   'std::end'
+   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
+                                     ^~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:107:37: note:   'std::end'
+2.cpp: In member function 'int Terrain::display()':
+2.cpp:419:36: error: 'begin' was not declared in this scope
+         for (auto& terrainObject : terrainObjects) {
+                                    ^~~~~~~~~~~~~~
+2.cpp:419:36: note: suggested alternatives:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\functional:55,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\thread:39,
+                 from 2.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:105:37: note:   'std::begin'
+   template<typename _Tp> const _Tp* begin(const valarray<_Tp>&);
+                                     ^~~~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:105:37: note:   'std::begin'
+2.cpp:419:36: error: 'end' was not declared in this scope
+         for (auto& terrainObject : terrainObjects) {
+                                    ^~~~~~~~~~~~~~
+2.cpp:419:36: note: suggested alternatives:
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:51:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\functional:55,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\thread:39,
+                 from 2.cpp:1:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:107:37: note:   'std::end'
+   template<typename _Tp> const _Tp* end(const valarray<_Tp>&);
+                                     ^~~
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\range_access.h:107:37: note:   'std::end'
+2.cpp: In member function 'void Terrain::activate()':
+2.cpp:440:28: error: 'enemyOnTerrain' was not declared in this scope
+         for (auto& enemy : enemyOnTerrain) {
+                            ^~~~~~~~~~~~~~
+2.cpp:441:41: error: 'class Terrain' has no member named 'level'
+             enemy->loseHealth(5, *this->level);
+                                         ^~~~~
+2.cpp:445:27: error: 'trapOnTerrain' was not declared in this scope
+         for (auto& trap : trapOnTerrain) {
+                           ^~~~~~~~~~~~~
+2.cpp: At global scope:
+2.cpp:472:9: error: 'int Road::display()' marked 'override', but does not override
+     int display() override {
+         ^~~~~~~
+2.cpp:476:10: error: 'void Road::activate()' marked 'override', but does not override
+     void activate() override {
+          ^~~~~~~~
+2.cpp: In constructor 'Road::Road(int)':
+2.cpp:466:28: error: no matching function for call to 'Terrain::Terrain(int&)'
+     Road(int a) : Terrain(a) {
+                            ^
+2.cpp:395:5: note: candidate: Terrain::Terrain()
+     Terrain() {}
+     ^~~~~~~
+2.cpp:395:5: note:   candidate expects 0 arguments, 1 provided
+2.cpp:373:7: note: candidate: constexpr Terrain::Terrain(const Terrain&)
+ class Terrain{
+       ^~~~~~~
+2.cpp:373:7: note:   no known conversion for argument 1 from 'int' to 'const Terrain&'
+2.cpp:373:7: note: candidate: constexpr Terrain::Terrain(Terrain&&)
+2.cpp:373:7: note:   no known conversion for argument 1 from 'int' to 'Terrain&&'
+2.cpp: At global scope:
+2.cpp:495:9: error: 'int Grass::display()' marked 'override', but does not override
+     int display() override {
+         ^~~~~~~
+2.cpp:499:10: error: 'void Grass::activate()' marked 'override', but does not override
+     void activate() override {
+          ^~~~~~~~
+2.cpp: In member function 'void Grass::activate()':
+2.cpp:501:29: error: 'terrainMap' was not declared in this scope
+         for (int i = 0; i < terrainMap.size(); i++) {
+                             ^~~~~~~~~~
+2.cpp:505:22: error: invalid use of incomplete type 'class Enemy'
+                     e->loseHealth(5, p);
+                      ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:505:38: error: 'p' was not declared in this scope
+                     e->loseHealth(5, p);
+                                      ^
+2.cpp: At global scope:
+2.cpp:528:9: error: 'int Hill::display()' marked 'override', but does not override
+     int display() override {
+         ^~~~~~~
+2.cpp:532:10: error: 'void Hill::activate()' marked 'override', but does not override
+     void activate() override {
+          ^~~~~~~~
+2.cpp: In member function 'void Hill::activate()':
+2.cpp:534:29: error: 'terrainMap' was not declared in this scope
+         for (int i = 0; i < terrainMap.size(); i++) {
+                             ^~~~~~~~~~
+2.cpp:538:22: error: invalid use of incomplete type 'class Enemy'
+                     e->loseHealth(3, p);
+                      ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:538:38: error: 'p' was not declared in this scope
+                     e->loseHealth(3, p);
+                                      ^
+2.cpp: In member function 'void Placedtowers::attack(Level*, int)':
+2.cpp:591:39: error: 'class Terrain' has no member named 't'
+                 if (terrainMap[i][j]->t != nullptr) {
+                                       ^
+2.cpp:592:39: error: 'class Terrain' has no member named 't'
+                     terrainMap[i][j]->t->attack(l, currentLoop);
+                                       ^
+2.cpp: In member function 'void Placedtowers::placeTower(Level&)':
+2.cpp:616:34: error: invalid use of incomplete type 'class Map'
+         if (x < 0 || x >= level.m->size() || y < 0 || y >= level.m->at(0).size()) {
+                                  ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:616:67: error: invalid use of incomplete type 'class Map'
+         if (x < 0 || x >= level.m->size() || y < 0 || y >= level.m->at(0).size()) {
+                                                                   ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:622:20: error: invalid use of incomplete type 'class Map'
+         if (level.m->at(x).at(y)->t != nullptr) {
+                    ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:631:40: error: invalid use of incomplete type 'class Gun'
+                 newTower = new Gun(x, y); // Assuming Gun tower constructor takes x and y coordinates
+                                        ^
+2.cpp:23:7: note: forward declaration of 'class Gun'
+ class Gun;
+       ^~~
+2.cpp:634:47: error: invalid use of incomplete type 'class MachineGun'
+                 newTower = new MachineGun(x, y); // Assuming MachineGun tower constructor takes x and y coordinates
+                                               ^
+2.cpp:24:7: note: forward declaration of 'class MachineGun'
+ class MachineGun;
+       ^~~~~~~~~~
+2.cpp:637:43: error: invalid use of incomplete type 'class Sniper'
+                 newTower = new Sniper(x, y); // Assuming Sniper tower constructor takes x and y coordinates
+                                           ^
+2.cpp:25:7: note: forward declaration of 'class Sniper'
+ class Sniper;
+       ^~~~~~
+2.cpp:640:42: error: invalid use of incomplete type 'class Magic'
+                 newTower = new Magic(x, y); // Assuming Magic tower constructor takes x and y coordinates
+                                          ^
+2.cpp:26:7: note: forward declaration of 'class Magic'
+ class Magic;
+       ^~~~~
+2.cpp:645:14: error: invalid use of incomplete type 'class Player'
+         if (p.money < newTower->cost) {
+              ^
+2.cpp:12:7: note: forward declaration of 'class Player'
+ class Player;
+       ^~~~~~
+2.cpp:645:31: error: invalid use of incomplete type 'class Tower'
+         if (p.money < newTower->cost) {
+                               ^~
+2.cpp:14:7: note: forward declaration of 'class Tower'
+ class Tower;
+       ^~~~~
+2.cpp:647:20: warning: possible problem detected in invocation of delete operator: [-Wdelete-incomplete]
+             delete newTower;
+                    ^~~~~~~~
+2.cpp:628:16: warning: 'newTower' has incomplete type
+         Tower* newTower = nullptr;
+                ^~~~~~~~
+2.cpp:14:7: note: forward declaration of 'class Tower'
+ class Tower;
+       ^~~~~
+2.cpp:647:20: note: neither the destructor nor the class-specific operator delete will be called, even if they are 
+declared when the class is defined
+             delete newTower;
+                    ^~~~~~~~
+2.cpp:652:16: error: invalid use of incomplete type 'class Map'
+         level.m->at(x).at(y)->t = newTower;
+                ^~
+2.cpp:11:7: note: forward declaration of 'class Map'
+ class Map;
+       ^~~
+2.cpp:653:10: error: invalid use of incomplete type 'class Player'
+         p.money -= newTower->cost; // Deduct the tower cost from the player's money
+          ^
+2.cpp:12:7: note: forward declaration of 'class Player'
+ class Player;
+       ^~~~~~
+2.cpp:653:28: error: invalid use of incomplete type 'class Tower'
+         p.money -= newTower->cost; // Deduct the tower cost from the player's money
+                            ^~
+2.cpp:14:7: note: forward declaration of 'class Tower'
+ class Tower;
+       ^~~~~
+2.cpp: In member function 'void Placedtowers::Placetower(Level&)':
+2.cpp:675:31: error: 'class Terrain' has no member named 't'
+         if (terrainMap[x][y]->t != nullptr) {
+                               ^
+2.cpp:683:36: error: invalid use of incomplete type 'class Gun'
+                 newTower = new Gun();
+                                    ^
+2.cpp:23:7: note: forward declaration of 'class Gun'
+ class Gun;
+       ^~~
+2.cpp:686:43: error: invalid use of incomplete type 'class MachineGun'
+                 newTower = new MachineGun();
+                                           ^
+2.cpp:24:7: note: forward declaration of 'class MachineGun'
+ class MachineGun;
+       ^~~~~~~~~~
+2.cpp:689:39: error: invalid use of incomplete type 'class Sniper'
+                 newTower = new Sniper();
+                                       ^
+2.cpp:25:7: note: forward declaration of 'class Sniper'
+ class Sniper;
+       ^~~~~~
+2.cpp:692:38: error: invalid use of incomplete type 'class Magic'
+                 newTower = new Magic();
+                                      ^
+2.cpp:26:7: note: forward declaration of 'class Magic'
+ class Magic;
+       ^~~~~
+2.cpp:696:14: error: invalid use of incomplete type 'class Player'
+         if (p.money < newTower->cost) {
+              ^
+2.cpp:12:7: note: forward declaration of 'class Player'
+ class Player;
+       ^~~~~~
+2.cpp:696:31: error: invalid use of incomplete type 'class Tower'
+         if (p.money < newTower->cost) {
+                               ^~
+2.cpp:14:7: note: forward declaration of 'class Tower'
+ class Tower;
+       ^~~~~
+2.cpp:698:20: warning: possible problem detected in invocation of delete operator: [-Wdelete-incomplete]
+             delete newTower;
+                    ^~~~~~~~
+2.cpp:680:16: warning: 'newTower' has incomplete type
+         Tower* newTower = nullptr;
+                ^~~~~~~~
+2.cpp:14:7: note: forward declaration of 'class Tower'
+ class Tower;
+       ^~~~~
+2.cpp:698:20: note: neither the destructor nor the class-specific operator delete will be called, even if they are 
+declared when the class is defined
+             delete newTower;
+                    ^~~~~~~~
+2.cpp:702:27: error: 'class Terrain' has no member named 't'
+         terrainMap[x][y]->t = newTower;
+                           ^
+2.cpp:703:10: error: invalid use of incomplete type 'class Player'
+         p.money -= newTower->cost;
+          ^
+2.cpp:12:7: note: forward declaration of 'class Player'
+ class Player;
+       ^~~~~~
+2.cpp:703:28: error: invalid use of incomplete type 'class Tower'
+         p.money -= newTower->cost;
+                            ^~
+2.cpp:14:7: note: forward declaration of 'class Tower'
+ class Tower;
+       ^~~~~
+2.cpp: In member function 'virtual void PlayerHealthTrap::activate()':
+2.cpp:728:9: error: 'p' was not declared in this scope
+         p.health -= 10;
+         ^
+2.cpp: In member function 'virtual void EnemyDamageTrap::activate()':
+2.cpp:744:29: error: 'terrainMap' was not declared in this scope
+         for (int i = 0; i < terrainMap.size(); i++) {
+                             ^~~~~~~~~~
+2.cpp:748:22: error: invalid use of incomplete type 'class Enemy'
+                     e->loseHealth(10, p);
+                      ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:748:39: error: 'p' was not declared in this scope
+                     e->loseHealth(10, p);
+                                       ^
+2.cpp: In member function 'void Map::printMap()':
+2.cpp:819:31: error: invalid use of incomplete type 'class Tower'
+                     g[i][j]->t->display();
+                               ^~
+2.cpp:14:7: note: forward declaration of 'class Tower'
+ class Tower;
+       ^~~~~
+2.cpp:823:31: error: invalid use of incomplete type 'class Tower'
+                     h[i][j]->t->display();
+                               ^~
+2.cpp:14:7: note: forward declaration of 'class Tower'
+ class Tower;
+       ^~~~~
+2.cpp: In member function 'void Map::addTower(Tower*, int, int)':
+2.cpp:832:26: error: cannot convert 'Tower*' to 'Trap*' in assignment
+             r[x][y]->t = t;
+                          ^
+2.cpp:14:7: note: class type 'Tower' is incomplete
+ class Tower;
+       ^~~~~
+2.cpp:833:38: error: cannot convert 'Road*' to 'Tower*' in assignment
+             towers[numTower] = r[x][y];
+                                      ^
+2.cpp: In member function 'void Map::moveEnemy()':
+2.cpp:844:39: error: invalid use of incomplete type 'class Enemy'
+                         r[i + 1][j]->e->setCoordinate(i + 1, j);
+                                       ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:848:39: error: invalid use of incomplete type 'class Enemy'
+                         r[i][j + 1]->e->setCoordinate(i, j + 1);
+                                       ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp: At global scope:
+2.cpp:887:17: error: 'level' has not been declared
+     void attack(level *l, int currentLoop) {
+                 ^~~~~
+2.cpp: In member function 'int Gun::GunTower(int, int)':
+2.cpp:885:30: error: only constructors take member initializers
+     GunTower(int x, int y) : Tower(x, y, 3, 10, 50, 500) {}
+                              ^~~~~
+2.cpp: In member function 'void Gun::attack(int*, int)':
+2.cpp:891:28: error: request for member 'm' in '* l', which is of non-class type 'int'
+                     if (l->m->r[x + i][y + j]->e != nullptr) {
+                            ^
+2.cpp:892:28: error: request for member 'm' in '* l', which is of non-class type 'int'
+                         l->m->r[x + i][y + j]->e->loseHealth(damage, *l);
+                            ^
+2.cpp: At global scope:
+2.cpp:909:17: error: 'level' has not been declared
+     void attack(level *l, int currentLoop) {
+                 ^~~~~
+2.cpp: In member function 'int MachineGun::MachineGunTower(int, int)':
+2.cpp:907:37: error: only constructors take member initializers
+     MachineGunTower(int x, int y) : Tower(x, y, 5, 5, 100, 200) {}
+                                     ^~~~~
+2.cpp: In member function 'void MachineGun::attack(int*, int)':
+2.cpp:914:28: error: request for member 'm' in '* l', which is of non-class type 'int'
+                     if (l->m->r[x + i][y + j]->e != nullptr) {
+                            ^
+2.cpp:915:28: error: request for member 'm' in '* l', which is of non-class type 'int'
+                         l->m->r[x + i][y + j]->e->loseHealth(damage, *l);
+                            ^
+2.cpp: At global scope:
+2.cpp:932:18: error: 'level' has not been declared
+     void attack( level *l, int currentLoop) {
+                  ^~~~~
+2.cpp: In constructor 'Sniper::Sniper(int, int)':
+2.cpp:930:57: error: no matching function for call to 'Tower::Tower(int&, int&, int, int, int, int)'
+     Sniper(int x, int y) : Tower(x, y, 10, 50, 100, 1000) {}
+                                                         ^
+2.cpp:868:5: note: candidate: Tower::Tower(int, int, int, int, int, int, int)
+     Tower(int x, int y, int range, int damage, int cost, int fireRate, int sellCost) : x(x), y(y), range(range), 
+damage(damage), cost(cost), firerate(fireRate), sellCost(sellCost) {}
+     ^~~~~
+2.cpp:868:5: note:   candidate expects 7 arguments, 6 provided
+2.cpp:859:7: note: candidate: constexpr Tower::Tower(const Tower&)
+ class Tower {
+       ^~~~~
+2.cpp:859:7: note:   candidate expects 1 argument, 6 provided
+2.cpp:859:7: note: candidate: constexpr Tower::Tower(Tower&&)
+2.cpp:859:7: note:   candidate expects 1 argument, 6 provided
+2.cpp: In member function 'void Sniper::attack(int*, int)':
+2.cpp:937:28: error: request for member 'm' in '* l', which is of non-class type 'int'
+                     if (l->m->r[x + i][y + j]->e != nullptr) {
+                            ^
+2.cpp:938:28: error: request for member 'm' in '* l', which is of non-class type 'int'
+                         l->m->r[x + i][y + j]->e->loseHealth(damage, *l);
+                            ^
+2.cpp: At global scope:
+2.cpp:956:18: error: 'level' has not been declared
+     void attack( level *l, int currentLoop) {
+                  ^~~~~
+2.cpp: In member function 'int Magic::MagicTower(int, int)':
+2.cpp:954:32: error: only constructors take member initializers
+     MagicTower(int x, int y) : Tower(x, y, 5, 20, 200, 1500) {}
+                                ^~~~~
+2.cpp: In member function 'void Magic::attack(int*, int)':
+2.cpp:961:28: error: request for member 'm' in '* l', which is of non-class type 'int'
+                     if (l->m->r[x + i][y + j]->e != nullptr) {
+                            ^
+2.cpp:962:28: error: request for member 'm' in '* l', which is of non-class type 'int'
+                         l->m->r[x + i][y + j]->e->loseHealth(damage, *l);
+                            ^
+2.cpp: In member function 'void Dushman::setCoordinate(int, int, Level&)':
+2.cpp:1006:18: error: 'Road* Map::r [15][10]' is private within this context
+             i.m->r[x][y]->e = nullptr;
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1010:18: error: 'Road* Map::r [15][10]' is private within this context
+         if (i.m->r[x][y]->e != nullptr) {
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1011:18: error: 'Road* Map::r [15][10]' is private within this context
+             i.m->r[x][y]->e->setCoordinate(-1, -1, i);
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1011:28: error: invalid use of incomplete type 'class Enemy'
+             i.m->r[x][y]->e->setCoordinate(-1, -1, i);
+                            ^~
+2.cpp:15:7: note: forward declaration of 'class Enemy'
+ class Enemy;
+       ^~~~~
+2.cpp:1014:14: error: 'Road* Map::r [15][10]' is private within this context
+         i.m->r[x][y]->e = this;
+              ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1014:27: error: cannot convert 'Dushman*' to 'Enemy*' in assignment
+         i.m->r[x][y]->e = this;
+                           ^~~~
+2.cpp: At global scope:
+2.cpp:1023:18: error: 'virtual void Enemy::display()' marked 'override', but does not override
+     virtual void display() override {
+                  ^~~~~~~
+2.cpp: In member function 'virtual bool Enemy::losehealth(int, Level&)':
+2.cpp:1028:9: error: 'int Dushman::health' is private within this context
+         health -= damage;
+         ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1029:13: error: 'int Dushman::health' is private within this context
+         if (health <= 0) {
+             ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1030:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1030:20: error: 'int Dushman::x' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                    ^
+2.cpp:979:9: note: declared private here
+     int x,y;
+         ^
+2.cpp:1030:23: error: 'int Dushman::y' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                       ^
+2.cpp:979:11: note: declared private here
+     int x,y;
+           ^
+2.cpp: In member function 'virtual bool Boss::losehealth(int, Level&)':
+2.cpp:1048:9: error: 'int Dushman::health' is private within this context
+         health -= damage;
+         ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1049:13: error: 'int Dushman::health' is private within this context
+         if (health <= 0) {
+             ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1050:24: error: 'int Dushman::money' is private within this context
+             l.money += money;
+                        ^~~~~
+2.cpp:978:9: note: declared private here
+     int money;
+         ^~~~~
+2.cpp:1051:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1051:20: error: 'int Dushman::x' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                    ^
+2.cpp:979:9: note: declared private here
+     int x,y;
+         ^
+2.cpp:1051:23: error: 'int Dushman::y' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                       ^
+2.cpp:979:11: note: declared private here
+     int x,y;
+           ^
+2.cpp: In member function 'void Boss::attack(int, int, Level&)':
+2.cpp:1058:42: error: 'class Map' has no member named 'n'
+         if (x >= 0 && y >= 0 && x < l.m->n && y < l.m->m && l.m->r[x][y]->e == nullptr) {
+                                          ^
+2.cpp:1058:56: error: 'class Map' has no member named 'm'
+         if (x >= 0 && y >= 0 && x < l.m->n && y < l.m->m && l.m->r[x][y]->e == nullptr) {
+                                                        ^
+2.cpp:1058:66: error: 'Road* Map::r [15][10]' is private within this context
+         if (x >= 0 && y >= 0 && x < l.m->n && y < l.m->m && l.m->r[x][y]->e == nullptr) {
+                                                                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1059:28: error: expected type-specifier before 'Tank'
+             Enemy* e = new Tank(health, money, x, y);
+                            ^~~~
+2.cpp:1060:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e = e;
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1061:16: error: 'class Enemy' has no member named 'setMoney'; did you mean 'getMoney'?
+             e->setMoney(money);
+                ^~~~~~~~
+2.cpp:1061:25: error: 'int Dushman::money' is private within this context
+             e->setMoney(money);
+                         ^~~~~
+2.cpp:978:9: note: declared private here
+     int money;
+         ^~~~~
+2.cpp:1062:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e->setCoordinate(x, y, l);
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1063:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e->display();
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp: In member function 'virtual bool Tank::losehealth(int, Level&)':
+2.cpp:1083:9: error: 'int Dushman::health' is private within this context
+         health -= damage;
+         ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1084:13: error: 'int Dushman::health' is private within this context
+         if (health <= 0) {
+             ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1085:24: error: 'int Dushman::money' is private within this context
+             l.money += money;
+                        ^~~~~
+2.cpp:978:9: note: declared private here
+     int money;
+         ^~~~~
+2.cpp:1086:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1086:20: error: 'int Dushman::x' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                    ^
+2.cpp:979:9: note: declared private here
+     int x,y;
+         ^
+2.cpp:1086:23: error: 'int Dushman::y' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                       ^
+2.cpp:979:11: note: declared private here
+     int x,y;
+           ^
+2.cpp: In member function 'void Tank::attack(int, int, Level&)':
+2.cpp:1095:42: error: 'class Map' has no member named 'n'
+         if (x >= 0 && y >= 0 && x < l.m->n && y < l.m->m && l.m->r[x][y]->e == nullptr) {
+                                          ^
+2.cpp:1095:56: error: 'class Map' has no member named 'm'
+         if (x >= 0 && y >= 0 && x < l.m->n && y < l.m->m && l.m->r[x][y]->e == nullptr) {
+                                                        ^
+2.cpp:1095:66: error: 'Road* Map::r [15][10]' is private within this context
+         if (x >= 0 && y >= 0 && x < l.m->n && y < l.m->m && l.m->r[x][y]->e == nullptr) {
+                                                                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1096:33: error: 'int Dushman::health' is private within this context
+             Enemy* e = new Tank(health, money, x, y);
+                                 ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1096:41: error: 'int Dushman::money' is private within this context
+             Enemy* e = new Tank(health, money, x, y);
+                                         ^~~~~
+2.cpp:978:9: note: declared private here
+     int money;
+         ^~~~~
+2.cpp:1096:52: error: invalid new-expression of abstract class type 'Tank'
+             Enemy* e = new Tank(health, money, x, y);
+                                                    ^
+2.cpp:1074:7: note:   because the following virtual functions are pure within 'Tank':
+ class Tank : public Enemy {
+       ^~~~
+2.cpp:980:18: note: 	virtual void Dushman::display() const
+     virtual void display() const = 0;
+                  ^~~~~~~
+2.cpp:1097:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e = e;
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1098:16: error: 'class Enemy' has no member named 'setMoney'; did you mean 'getMoney'?
+             e->setMoney(money);
+                ^~~~~~~~
+2.cpp:1098:25: error: 'int Dushman::money' is private within this context
+             e->setMoney(money);
+                         ^~~~~
+2.cpp:978:9: note: declared private here
+     int money;
+         ^~~~~
+2.cpp:1099:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e->setCoordinate(x, y, l);
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1100:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e->display();
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp: In member function 'virtual bool Armoured::losehealth(int, Level&)':
+2.cpp:1118:9: error: 'int Dushman::health' is private within this context
+         health -= (damage / (3.14 * armour) + (0.3 * pow(damage, log(3)) + 10);
+         ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1118:79: error: expected ')' before ';' token
+         health -= (damage / (3.14 * armour) + (0.3 * pow(damage, log(3)) + 10);
+                                                                               ^
+2.cpp:1120:13: error: 'int Dushman::health' is private within this context
+         if (health <= 0)
+             ^~~~~~
+2.cpp:977:9: note: declared private here
+     int health;
+         ^~~~~~
+2.cpp:1122:24: error: 'int Dushman::money' is private within this context
+             l.money += money;
+                        ^~~~~
+2.cpp:978:9: note: declared private here
+     int money;
+         ^~~~~
+2.cpp:1123:18: error: 'Road* Map::r [15][10]' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                  ^
+2.cpp:788:19: note: declared private here
+     Road* r[15][10];
+                   ^
+2.cpp:1123:20: error: 'int Dushman::x' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                    ^
+2.cpp:979:9: note: declared private here
+     int x,y;
+         ^
+2.cpp:1123:23: error: 'int Dushman::y' is private within this context
+             l.m->r[x][y]->e = nullptr;
+                       ^
+2.cpp:979:11: note: declared private here
+     int x,y;
+           ^
