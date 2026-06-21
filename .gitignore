@@ -1,0 +1,8 @@
+*.exe 
+*.o 
+*.obj 
+.vs/ 
+*.ilk 
+*.pdb 
+compile_errors.txt 
+compile_errors_utf8.txt 
